@@ -29,11 +29,15 @@ class HomeScreen extends StatelessWidget {
         child: Column(
                 children: [
 
-                  //* cardSwiper  - tarjeta principales
+                  //* cardSwiper  - tarjeta principales 
                   SwiperScreen(movies: moviesProvider.onDisplayMovie),
 
-                  //* listado de peliculas
-                  MovieSlider(),
+                  //* listado de peliculas populares
+                  MovieSlider(
+                    movie:moviesProvider.popularMovies,
+                    title: 'Populares..!' ,
+                    onNextPage: ()=>moviesProvider.getPopularMovies(),  //opcional
+                  ),
 
                 ],
               )
