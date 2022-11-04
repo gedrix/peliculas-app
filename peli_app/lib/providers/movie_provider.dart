@@ -7,7 +7,7 @@ import 'package:peli_app/models/models.dart';
 class MoviesProvider extends ChangeNotifier{
 
   final  String _baseUrl ='api.themoviedb.org';
-  final String _baseKey ='e603abeb68e47cb9f597c9a964a97e39';
+  final String _baseKey ='';
   final String _languaje ='es-ES';
   
   List<Movie> onDisplayMovie=[];
