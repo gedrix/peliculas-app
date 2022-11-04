@@ -33,10 +33,18 @@ class Movie {
     double voteAverage;
     int voteCount;
 
-
+    //para obtener la imagen de la pelicula
     get fullPosterImg{
       if (this.posterPath != null){
         return 'https://image.tmdb.org/t/p/w500${ this.posterPath }';
+      }else{
+        return 'https://i.stack.imgur.com/GNhxO.png';
+      }
+    }
+    //para obtener la imagen del actor
+    get fullBackdropPath{
+      if (this.backdropPath != null){
+        return 'https://image.tmdb.org/t/p/w500${ this.backdropPath }';
       }else{
         return 'https://i.stack.imgur.com/GNhxO.png';
       }
