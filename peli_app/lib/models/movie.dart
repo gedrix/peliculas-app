@@ -32,6 +32,8 @@ class Movie {
     bool video;
     double voteAverage;
     int voteCount;
+    
+    String? heroId;
 
     //para obtener la imagen de la pelicula
     get fullPosterImg{
