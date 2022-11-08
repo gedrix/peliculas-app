@@ -5,9 +5,7 @@ class ScrollScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
+    var  boxDecoration =const BoxDecoration(
           gradient:  LinearGradient(
             begin:  Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -17,7 +15,10 @@ class ScrollScreen extends StatelessWidget {
               Color(0xff30BAD6)
             ]
           )
-        ),
+        );
+    return Scaffold(
+      body: Container(
+        decoration:  boxDecoration,
         child: PageView(
           physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
