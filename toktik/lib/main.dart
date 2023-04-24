@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toktik/presentation/providers/discover_provider.dart';
-import 'package:toktik/theme/app_theme.dart';
+import 'package:toktik/config/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 import 'presentation/screens/discover/discover_screen.dart';
 
@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers :[
-        ChangeNotifierProvider(create: (_) =>DiscoverProvider()),
+        ChangeNotifierProvider(
+          lazy: false,
+          create: (_) =>DiscoverProvider()..loadNextPage()
+          ),  // si se pone .. operador de cascada
       ],
       child: MaterialApp(
         title: 'tok tik',
