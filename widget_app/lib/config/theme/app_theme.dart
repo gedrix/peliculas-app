@@ -13,12 +13,15 @@ Colors.deepPurple,
 class AppTheme {
   final int selectColor;
   AppTheme({
-     this.selectColor = 0,
+     this.selectColor = 1,
   }):assert(selectColor >=0, 'El color no existe'),
      assert(selectColor < colorList.length, 'El color no existe');
 
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
-    colorSchemeSeed: colorList[selectColor]
+    colorSchemeSeed: colorList[selectColor],
+    appBarTheme: const AppBarTheme(
+      centerTitle: true
+    )
   );
 }
