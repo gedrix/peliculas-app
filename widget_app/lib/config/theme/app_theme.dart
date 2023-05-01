@@ -8,12 +8,12 @@ Colors.green,
 Colors.purple,
 Colors.deepOrange,
 Colors.deepPurple,
-
 ];
+
 class AppTheme {
   final int selectColor;
   AppTheme({
-     this.selectColor = 1,
+     this.selectColor = 0,   //color por defecto
   }):assert(selectColor >=0, 'El color no existe'),
      assert(selectColor < colorList.length, 'El color no existe');
 

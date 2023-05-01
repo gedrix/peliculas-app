@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:widget_app/config/menu/menu_items.dart';
 import 'package:go_router/go_router.dart';
 
+
 class HomeScreen extends StatelessWidget {
+
+  static const String name = 'home_scren';
   const HomeScreen({super.key});
 
   @override
@@ -59,8 +62,9 @@ class _CustomListTitle extends StatelessWidget {
         //   ),
         // );
         
-
-        context.push(menuItem.link);
+        //lamo a la ruta de un link
+        context.push(menuItem.link); //TODO para llamar directo al link
+        // context.pushNamed(menuItem.link);
       },
     );
   }
