@@ -5,17 +5,20 @@ import 'package:widget_app/config/presentation/widgets/drawers/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_scren';
+
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final scaffolkey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      key: scaffolkey,
       appBar: AppBar(
         title: const Text('flutter + material 3'),
       ),
       body: _HomeView(),
       
-      drawer: const  SideMenu()
+      drawer:  SideMenu(scaffolkey: scaffolkey,)
     );
   }
 }
