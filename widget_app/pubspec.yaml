@@ -13,12 +13,13 @@ dependencies:
 dev_dependencies:
   animate_do: ^3.0.2
   flutter_lints: ^2.0.0
+  flutter_riverpod: ^2.3.6
   flutter_test:
     sdk: flutter
   go_router: ^7.0.0
 
 flutter:
   uses-material-design: true
-  
+
   assets:
     - assets/images/
